@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Joompd</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+        />
+        <style>
+            .center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            body {
+                overflow-y: hidden; /* Hide vertical scrollbar */
+                overflow-x: hidden; /* Hide horizontal scrollbar */
+            }
+            .hero {
+                background: url(https://media.discordapp.net/attachments/732233028348411944/940958776083771393/forest.png)
+                    center / cover;
+                height: auto;
+                overflow: hidden;
+            }
+            .side-list {
+                /*backdrop-filter: blur(55px);
+                backdrop-filter: opacity(80%);*/
+                background-color: rgba(0, 0, 0, 0.8);
+                height: 100vh;
+            }
+
+            .side-list a {
+                color: white;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+            .side-list p {
+                padding-top: 5%;
+                padding-left: 10%;
+            }
+
+            @media only screen and (max-width: 770px) {
+                .side-list {
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body class="hero is-fullheight">
+        <div class="columns">
+            <div class="column is-2">
+                <aside class="side-list menu">
+                    <p class="menu-label is-size-5 has-text-white">Joompd</p>
+                    <ul class="menu-list">
+                        <li><a>Home</a></li>
+                        <li><a>Search</a></li>
+                        <li><a>Your library</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column is-8">
+                <div class="box">I'm in a box.</div>
+                <div class="box">I'm in a box.</div>
+            </div>
+            <div class="column is-2"></div>
+        </div>
+    </body>
+</html>
