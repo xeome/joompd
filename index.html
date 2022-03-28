@@ -1,70 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Joompd</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-        />
         <style>
-            .center {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            :root {
+                font-size: 16px;
+                font-family: "Open Sans";
+                color: #ffffff;
+                --menubackground: #202225;
+                --transition-speed: 600ms;
+            }
+            main {
+                margin-left: 20rem;
+            }
+            body::-webkit-scrollbar {
+                width: 0.4rem;
+                background-color: #1e1e24;
+            }
+            body::-webkit-scrollbar-track {
+                background: #1e1e24;
+            }
+            body::-webkit-scrollbar-thumb {
+                background: #483280;
             }
             body {
-                overflow-y: hidden; /* Hide vertical scrollbar */
-                overflow-x: hidden; /* Hide horizontal scrollbar */
+                background-color: #151515;
+                margin: 0px;
             }
-            .hero {
-                background: url(https://media.discordapp.net/attachments/732233028348411944/940958776083771393/forest.png)
-                    center / cover;
-                height: auto;
-                overflow: hidden;
-            }
-            .side-list {
-                /*backdrop-filter: blur(55px);
-                backdrop-filter: opacity(80%);*/
-                background-color: rgba(0, 0, 0, 0.8);
+            .navbar {
+                width: 10rem;
                 height: 100vh;
+                position: fixed;
+                background-color: var(--menubackground);
             }
-
-            .side-list a {
-                color: white;
-                padding-left: 10%;
-                padding-right: 10%;
+            .menuitem {
+                display: flex;
+                filter: opacity(0.8);
+                transition: var(--transition-speed);
+                margin-top: 1rem;
+                margin-left: 1rem;
             }
-            .side-list p {
-                padding-top: 5%;
-                padding-left: 10%;
+            .menuitem:hover {
+                filter: opacity(1);
+                transition: var(--transition-speed);
             }
-
-            @media only screen and (max-width: 770px) {
-                .side-list {
-                    height: auto;
-                }
+            ul.navmenu {
+                display: block;
+                margin-top: 5rem;
+                justify-content: center;
+                padding-inline-start: 0;
             }
         </style>
     </head>
-    <body class="hero is-fullheight">
-        <div class="columns">
-            <div class="column is-2">
-                <aside class="side-list menu">
-                    <p class="menu-label is-size-5 has-text-white">Joompd</p>
-                    <ul class="menu-list">
-                        <li><a>Home</a></li>
-                        <li><a>Search</a></li>
-                        <li><a>Your library</a></li>
-                    </ul>
-                </aside>
-            </div>
-            <div class="column is-8">
-                <div class="box">I'm in a box.</div>
-                <div class="box">I'm in a box.</div>
-            </div>
-            <div class="column is-2"></div>
-        </div>
+    <body>
+        <nav class="navbar">
+            <ul class="navmenu">
+                <div class="menuitem">
+                    <b>hello world</b>
+                </div>
+                <div class="menuitem">
+                    <b>hello world2</b>
+                </div>
+            </ul>
+        </nav>
+        <footer></footer>
     </body>
 </html>
